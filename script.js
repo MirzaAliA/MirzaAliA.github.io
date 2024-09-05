@@ -88,7 +88,7 @@ document.addEventListener('click', async function (e) {
 });
 
 function getMovies(keyword) {
-    return fetch('http://www.omdbapi.com/?apikey=3ff74d7&s=' + keyword)
+    return fetch('https://www.omdbapi.com/?apikey=3ff74d7&s=' + keyword)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Something Went Wrong!');
@@ -113,7 +113,7 @@ function updateUI (movies) {
 };
 
 function getMovieDetail(imdbid) {
-    return fetch('http://www.omdbapi.com/?apikey=3ff74d7&i=' + imdbid)
+    return fetch('https://www.omdbapi.com/?apikey=3ff74d7&i=' + imdbid)
         .then(response => response.json())
         .then(response => response)
 };
